@@ -13,7 +13,7 @@ variable "sg-name" {
 variable "sg_description" {
     description = "Security Group Description"
     type = string
-    default = null  
+    default = "Flugel SG"  
 }
 
 variable "sg-tag_name" {
