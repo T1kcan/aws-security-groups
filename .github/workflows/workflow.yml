@@ -20,12 +20,12 @@ jobs:
           terraform_version: 1.2.4
           terraform_wrapper: false
 
-      - name: Terraform Lint
-        run: terraform fmt --diff --check --recursive
-        
       - name: Terraform Validate
         run: terraform init; terraform validate
 
+      - name: Terraform Lint
+        run: terraform fmt --diff --check --recursive
+        
       - name: Terraform TfSec
         run: |
           wget https://github.com/tfsec/tfsec/releases/download/v0.36.7/tfsec-linux-amd64
